@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#003555"
+    tools:context=".LabTestDetail">
+
+    <ImageButton
+        android:id="@+id/ltDetailBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:background="@android:color/transparent"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="25dp"
+        android:layout_toStartOf="@id/doctorDetailName"/>
+
+    <ImageButton
+        android:id="@+id/ltDetailGoToCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_shopping_cart_24"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="150dp"
+        android:layout_toEndOf="@id/doctorDetailName"/>
+
+    <TextView
+        android:id="@+id/doctorDetailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="HEALTHCARE"
+        android:textColor="#FEFDFE"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/deliverLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deliver Location : Daska"
+        android:textColor="#FF9800"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/doctorDetailName"/>
+    <TextView
+        android:id="@+id/ltDetailPackages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab Test and Packages"
+        android:textColor="#CDDC39"
+        android:textSize="19dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/deliverLocation"/>
+
+    <EditText
+        android:id="@+id/detail"
+        android:layout_width="290dp"
+        android:layout_height="372dp"
+        android:layout_below="@id/ltDetailGoToCart"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:editable="false"
+        android:gravity="start|top"
+        android:text="Hi \n This is Health Care App."
+        android:textColor="#FEFDFE"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/ltDetailTotalCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Cost : 0.0"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/detail"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FEFDFE"
+        android:textSize="20dp"/>
+
+</RelativeLayout>

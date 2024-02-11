@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#003555"
+    tools:context=".LabActivity">
+
+    <ImageButton
+        android:id="@+id/labCartBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:background="@android:color/transparent"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="25dp"
+        android:layout_toStartOf="@id/doctorDetailName"/>
+
+    <ImageButton
+        android:id="@+id/LabPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_shopping_cart_checkout_24"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="150dp"
+        android:layout_toEndOf="@id/doctorDetailName"/>
+
+    <TextView
+        android:id="@+id/doctorDetailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="HEALTHCARE"
+        android:textColor="#FEFDFE"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/deliverLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deliver Location : Daska"
+        android:textColor="#FF9800"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ltDetailPackages"/>
+    <TextView
+        android:id="@+id/ltDetailPackages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab Test Cart Items"
+        android:textColor="#CDDC39"
+        android:textSize="19dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/doctorDetailName"/>
+
+    <ListView
+        android:id="@+id/lv_labCart"
+        android:layout_width="380dp"
+        android:layout_height="372dp"
+        android:layout_below="@id/LabPay"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/LabTotalCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Cost : 1200/-"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/lv_labCart"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FEFDFE"
+        android:textSize="20dp"/>
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LabTotalCost"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+        <RelativeLayout
+            android:id="@+id/rl_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp">
+            <TextView
+                android:id="@+id/LabtxtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Date"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:textSize="17dp"
+                android:textColor="#CDDC39" />
+            <ImageButton
+                android:id="@+id/LabdateBtn"
+                style="?android:spinnerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/LabtxtDate"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_calendar_month_24"
+                app:tint="#CDDC39"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/rl_Date"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/LabtxtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Time"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:textSize="17dp"
+                android:textColor="#CDDC39" />
+            <ImageButton
+                android:id="@+id/LabTimeBtn"
+                style="?android:spinnerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/LabtxtTime"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_access_time_24"
+                app:tint="#CDDC39"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
